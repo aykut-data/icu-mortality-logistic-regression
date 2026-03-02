@@ -4,7 +4,6 @@ getwd()
 # Set working directory (use / or \\ for Windows)
 setwd("C:/Users/***/***/***")
 
-
 library(ggplot2)
 library(dplyr)
 library(ROCR)
@@ -80,4 +79,5 @@ masterdata$predY<-as.factor(ifelse(masterdata$predprob>best_threshold,1,0))
 confusionMatrix(masterdata$predY,masterdata$STA,positive="1")
 
 #The sensitivity and specificity values using optimum threshold are approximately 65% and 89% 
+
 #and the accuracy is approximately 84% indicating good model performance.
